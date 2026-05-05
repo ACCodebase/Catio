@@ -1,41 +1,11 @@
-
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Model Viewer</title>
-
-  <!-- model-viewer web component -->
-
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-  <style>
-    html, body {
-      margin: 0;
-      height: 100%;
-      background: #111;
-    }
-
-    model-viewer {
-      width: 100vw;
-      height: 100vh;
-      background-color: #111;
-    }
-  </style>
-
-</head>
-<body>
+<!-- Load the library (CDN, no install needed) -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 
 <model-viewer
- src="model.glb"
- alt="3D model"
- auto-rotate
- camera-controls
- exposure="1"
- shadow-intensity="1"
- environment-image="neutral"> </model-viewer>
-
-</body>
-</html>
+  src="model.glb"
+  ios-src="your-model.usdz"
+  ar
+  ar-modes="webxr scene-viewer quick-look"
+  camera-controls
+  alt="My 3D model">
+</model-viewer>
